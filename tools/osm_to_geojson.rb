@@ -45,7 +45,7 @@ end
 def way_to_geojson(way)
   {
     type: 'Feature',
-    properties: { name: way.name },
+    properties: { id: way.id, name: way.name },
     geometry: {
       type: 'LineString',
       coordinates: way.coordinates

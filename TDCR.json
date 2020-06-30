@@ -4,6 +4,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 492429238,
         "name": "Austin Acres"
       },
       "geometry": {
@@ -95,6 +96,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 492429245,
         "name": "Docteur Charette"
       },
       "geometry": {
@@ -294,6 +296,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 492429255,
         "name": "La Cordiale"
       },
       "geometry": {
@@ -665,6 +668,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 492429260,
         "name": "La Richard Grant"
       },
       "geometry": {
@@ -756,6 +760,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 492429268,
         "name": "Austin Acres"
       },
       "geometry": {
@@ -783,6 +788,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829802,
         "name": "La Tinsco"
       },
       "geometry": {
@@ -1014,6 +1020,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829803,
         "name": "La Tinsco"
       },
       "geometry": {
@@ -1173,6 +1180,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829804,
         "name": "Le Conflit"
       },
       "geometry": {
@@ -1556,6 +1564,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829805,
         "name": "La MEC"
       },
       "geometry": {
@@ -1779,6 +1788,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829806,
         "name": "La Tinsco (option)"
       },
       "geometry": {
@@ -1862,6 +1872,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829808,
         "name": "La Carroll (option)"
       },
       "geometry": {
@@ -1917,6 +1928,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829809,
         "name": "La Carroll"
       },
       "geometry": {
@@ -2300,6 +2312,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829812,
         "name": "Le Clairière"
       },
       "geometry": {
@@ -2367,6 +2380,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829814,
         "name": "La Crete"
       },
       "geometry": {
@@ -2470,6 +2484,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829815,
         "name": "La Cache"
       },
       "geometry": {
@@ -2597,6 +2612,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829816,
         "name": "Le Cordon"
       },
       "geometry": {
@@ -2676,6 +2692,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829817,
         "name": "Le Sommet Carroll"
       },
       "geometry": {
@@ -2823,6 +2840,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829818,
         "name": "La Gravel"
       },
       "geometry": {
@@ -2922,6 +2940,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829819,
         "name": "Austin Acres"
       },
       "geometry": {
@@ -2969,6 +2988,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829821,
         "name": "Austin Acres"
       },
       "geometry": {
@@ -3092,6 +3112,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829824,
         "name": "La Castor"
       },
       "geometry": {
@@ -3275,6 +3296,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829825,
         "name": "L'attache ta tuque"
       },
       "geometry": {
@@ -3310,6 +3332,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829826,
         "name": "La Petite Virée"
       },
       "geometry": {
@@ -3505,6 +3528,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829827,
         "name": "L'attache ta tuque"
       },
       "geometry": {
@@ -3732,6 +3756,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829828,
         "name": "La Descente"
       },
       "geometry": {
@@ -3803,6 +3828,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829829,
         "name": "Docteur Charette (option)"
       },
       "geometry": {
@@ -3874,6 +3900,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829830,
         "name": "Le Cap"
       },
       "geometry": {
@@ -4097,6 +4124,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773829831,
         "name": "Le Cap"
       },
       "geometry": {
@@ -4144,6 +4172,7 @@
     {
       "type": "Feature",
       "properties": {
+        "id": 773832579,
         "name": "La Carroll (option)"
       },
       "geometry": {

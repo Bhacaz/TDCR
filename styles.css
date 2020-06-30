@@ -12,3 +12,31 @@ html, body {
 html { height: 100% }
 body { height: 100%; margin: 0; padding: 0; overflow: hidden; }
 #map { height: 100% }
+#trailSelector {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2em;
+    backdrop-filter: blur(5px);
+    padding-right: 1em;
+    max-height: 10em;
+    overflow: scroll;
+}
+
+ul {
+    padding-left: 0.5em;
+}
+
+li {
+    display: flex;
+    vertical-align: baseline;
+    padding-bottom: 0.2em;
+}
+
+.dot {
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+    display: inline-block;
+    border: black 2px solid;
+    margin-right: 0.5em;
+}
