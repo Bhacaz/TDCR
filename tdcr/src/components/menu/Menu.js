@@ -1,7 +1,7 @@
 import React from "react";
 import './Menu.css';
 import { Dropdown } from 'react-bootstrap'
-import colors from '../colors';
+import colors from '../../models/colors';
 
 class Menu extends React.Component {
     constructor(props) {

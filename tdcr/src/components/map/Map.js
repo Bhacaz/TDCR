@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import './Map.css'
-import colors from '../colors';
+import colors from '../../models/colors';
 
 function mapOptions(maps) {
     return {
