@@ -1,0 +1,35 @@
+
+.btn {
+    border-radius: 0 !important;
+    border: 0 !important;
+    width: 100%;
+    background-color: #6090C0 !important;
+    height: 3em !important;
+}
+
+.dropdown-menu {
+    padding: 0 !important;
+    width: 100%;
+    border: 0 !important;
+    border-radius: 0!important;
+}
+
+.dropdown-menu.show {
+    transform: translate3d(0px, 48px, 0px) !important;
+    max-height: 10em;
+    overflow: scroll;
+}
+
+.dropdown-item {
+    height: 2.5em;
+    padding-top: 8px !important;
+}
+
+.dot {
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+    display: inline-block;
+    border: grey 1px solid;
+    margin-right: 0.5em;
+}

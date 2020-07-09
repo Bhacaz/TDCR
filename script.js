@@ -17,7 +17,6 @@ function initMap() {
     const list = document.getElementById('trailList');
 
     map.data.loadGeoJson('TDCR.json', '', function(features) {
-        console.log(features);
         features.forEach(function(feature, index) {
             map.data.overrideStyle(feature, { strokeColor: colors[index]});
             const liElement = document.createElement('li');
