@@ -16,7 +16,7 @@ class Menu extends React.Component {
 
     dropdownItems() {
         return this.data.map((data, index) => {
-            return <Dropdown.Item eventKey={data.name} onSelect={this.itemSelected}>
+            return <Dropdown.Item eventKey={data.id} onSelect={this.itemSelected}>
                 <div class="dot" style={{backgroundColor: colors[index]}}/>
                 <span>{data.name}</span>
             </Dropdown.Item>
@@ -24,7 +24,9 @@ class Menu extends React.Component {
     }
 
     itemSelected = (eventKey) => {
-        this.setState({ selectedItem: eventKey })
+        const line = this.data.find(d => d.id.toString() === eventKey);
+        this.setState({ selectedItem: line.name });
+        this.props.onLineSelected(eventKey);
     }
 
     render() {

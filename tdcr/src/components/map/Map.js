@@ -19,20 +19,23 @@ function mapOptions(maps) {
     }
 }
 
-function selectedLine(feature) {
-
+function highlightLine(map, lineId) {
+    map.data.setStyle(function(feature, index) {
+        const id = feature.getProperty('id');
+        let stroke = 2;
+        if (lineId === id)  {
+            stroke = 5
+        }
+        return { strokeColor: colors[index], strokeWeight: stroke }
+    });
 }
 
 const handleApiLoaded = (map, maps) => {
     map.data.loadGeoJson('layout/TDCR.json', '', function(features) {
         features.forEach(function(feature, index) {
             map.data.overrideStyle(feature, { strokeColor: colors[index]});
-
             map.data.addListener('click', function(event) {
-                features.forEach(function(feature) {
-                    map.data.overrideStyle(feature, { strokeWeight: 2 });
-                });
-                map.data.overrideStyle(event.feature, { strokeWeight: 6 });
+                highlightLine(map, event.feature.getProperty('id'))
             });
         })
     });
@@ -65,6 +68,13 @@ class Map extends React.Component {
         center: { lat: 46.067344, lng: -73.698438 },
         zoom: 14
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedLineId: props.selectedLineId
+        }
+    }
 
     render() {
         return (
