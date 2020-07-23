@@ -1,0 +1,11 @@
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [mapTypeId]="options.mapTypeId"
+  [zoom]="options.zoom"
+  [streetViewControl]="options.streetViewControl"
+  [mapTypeControl]="options.mapTypeControl"
+  [mapTypeControlOptions]="options.mapTypeControlOptions"
+>
+  <agm-data-layer [geoJson]="features" (layerClick)="clicked($event)" [style]="styleFunc"></agm-data-layer>
+</agm-map>
