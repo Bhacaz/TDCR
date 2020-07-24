@@ -21,3 +21,12 @@
 .mat-list-item {
   background-color: white;
 }
+
+.dot {
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+  display: inline-block;
+  border: grey 1px solid;
+  margin-right: 0.5em;
+}
