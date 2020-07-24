@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tournée des Cantons de Rawdon</title>
+  <base href="https://bhacaz.github.io/TDCR/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      let redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+<link rel="stylesheet" href="styles.970e370ce91e9342e8a5.css"></head>
+<body>
+  <app-root></app-root>
+<script type="text/javascript" src="runtime.80ab492fe3d778817936.js"></script><script type="text/javascript" src="es2015-polyfills.4026386deac8c168a6f4.js" nomodule></script><script type="text/javascript" src="polyfills.7ff3fc35f9bdbaf81d86.js"></script><script type="text/javascript" src="main.2a1df4d1f5aa413073d4.js"></script></body>
+</html>
