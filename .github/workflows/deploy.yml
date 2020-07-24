@@ -19,7 +19,6 @@ jobs:
           npm install -g @angular/cli
           REPONAME="$(echo $GITHUB_REPOSITORY| cut -d'/' -f 2)"
           ng build --prod --base-href https://bhacaz.github.io/TDCR
-          mv CNAME dist/$REPONAME/
         env:
           CI: true
 
