@@ -8,7 +8,7 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TrackMenuComponent } from './track-menu/track-menu.component';
+import { TrailMenuComponent } from './trail-menu/trail-menu.component';
 import {MatButtonModule, MatMenuModule} from "@angular/material";
 
 @NgModule({
@@ -16,7 +16,7 @@ import {MatButtonModule, MatMenuModule} from "@angular/material";
     AppComponent,
     HomeComponent,
     MapComponent,
-    TrackMenuComponent
+    TrailMenuComponent
   ],
   imports: [
     HttpClientModule,

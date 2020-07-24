@@ -3,11 +3,11 @@ import {LayoutDataService} from "../common/layout-data.service";
 import colors from "../common/colors";
 
 @Component({
-  selector: 'app-track-menu',
-  templateUrl: './track-menu.component.html',
-  styleUrls: ['./track-menu.component.scss']
+  selector: 'app-trail-menu',
+  templateUrl: './trail-menu.component.html',
+  styleUrls: ['./trail-menu.component.scss']
 })
-export class TrackMenuComponent implements OnInit {
+export class TrailMenuComponent implements OnInit {
 
   selectedItemName = 'Tournée des Cantons de Rawdon ▽';
   features;

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrackMenuComponent } from './track-menu.component';
+import { TrailMenuComponent } from './trail-menu.component';
 
-describe('TrackMenuComponent', () => {
-  let component: TrackMenuComponent;
-  let fixture: ComponentFixture<TrackMenuComponent>;
+describe('TrailMenuComponent', () => {
+  let component: TrailMenuComponent;
+  let fixture: ComponentFixture<TrailMenuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrackMenuComponent ]
+      declarations: [ TrailMenuComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrackMenuComponent);
+    fixture = TestBed.createComponent(TrailMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
