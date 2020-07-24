@@ -8,12 +8,15 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrackMenuComponent } from './track-menu/track-menu.component';
+import {MatButtonModule, MatMenuModule} from "@angular/material";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    TrackMenuComponent
   ],
   imports: [
     HttpClientModule,
@@ -22,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC24WVTUS6lPMaFXwozCjSl3Eik9gMJ7Ik'
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

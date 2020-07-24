@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +11,15 @@ export class LayoutDataService {
 
   getLayoutData(): Observable<any> {
     return this.httpClient.get('assets/layout/TDCR.json')
+  }
+
+  private subject$ = new Subject<any>();
+
+  selectedTrackChanged(trail: object) {
+    this.subject$.next(trail);
+  }
+
+  selectedTrackChanging(): Observable<any> {
+    return this.subject$.asObservable();
   }
 }

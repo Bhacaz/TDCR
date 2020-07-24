@@ -24,11 +24,11 @@ export class MapComponent implements OnInit {
 
   features: any;
 
-  constructor(private layoutDataServer: LayoutDataService) {
+  constructor(private layoutDataService: LayoutDataService) {
   }
 
   ngOnInit() {
-    this.layoutDataServer.getLayoutData().subscribe(data => {
+    this.layoutDataService.getLayoutData().subscribe(data => {
       data.features.forEach((feature, index) => feature.properties.color = colors[index]);
       this.features = data
     });

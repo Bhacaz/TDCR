@@ -1,0 +1,11 @@
+<mat-menu #appMenu="matMenu">
+  <ng-template matMenuContent>
+    <button mat-menu-item *ngFor="let feature of features" (click)="trackSelected(feature)">
+      {{ feature.properties.name }}
+    </button>
+  </ng-template>
+</mat-menu>
+
+<button mat-button color="primary" [matMenuTriggerFor]="appMenu" id="track-menu">
+  {{selectedItemName}}
+</button>
