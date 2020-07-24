@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {LayoutDataService} from "../common/layout-data.service";
 import colors from "../common/colors";
 
@@ -7,12 +7,16 @@ import colors from "../common/colors";
   templateUrl: './trail-menu.component.html',
   styleUrls: ['./trail-menu.component.scss']
 })
-export class TrailMenuComponent implements OnInit {
+export class TrailMenuComponent implements OnInit, OnDestroy {
 
   selectedItemName = 'Tournée des Cantons de Rawdon ▽';
   features;
+  trailChangingSubscription;
 
-  constructor(private layoutDataService: LayoutDataService) { }
+
+  constructor(private layoutDataService: LayoutDataService) {
+    this.trailChangingSubscription = this.layoutDataService.selectedTrailChanging().subscribe(feature => this.trackSelected(feature));
+  }
 
   ngOnInit() {
     this.layoutDataService.getLayoutData().subscribe(data => {
@@ -23,5 +27,10 @@ export class TrailMenuComponent implements OnInit {
 
   trackSelected(feature) {
     this.selectedItemName = feature.properties.name + ' ▽';
+  }
+
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.trailChangingSubscription.unsubscribe();
   }
 }

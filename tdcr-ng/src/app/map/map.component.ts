@@ -43,6 +43,7 @@ export class MapComponent implements OnInit {
    }
 
   clicked(event) {
-    console.log(event.feature.getProperty('name'));
+    const feature = this.features.features.find(feature => feature.properties.id === event.feature.getProperty('id'));
+    this.layoutDataService.selectedTrailChanged(feature);
   }
 }
