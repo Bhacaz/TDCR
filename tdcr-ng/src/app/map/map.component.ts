@@ -55,10 +55,8 @@ export class MapComponent implements OnInit, OnDestroy {
   }
 
   trackSelectedFromMenu(feature) {
-    console.log(feature)
     const featureId = feature.properties.id;
     const bounds = new google.maps.LatLngBounds();
-    console.log(this.map.data)
     this.map.data.forEach(dataFeature => {
       if (dataFeature.getProperty('id') === featureId) {
         dataFeature.getGeometry().forEachLatLng(latLng => bounds.extend(latLng))
@@ -73,10 +71,36 @@ export class MapComponent implements OnInit, OnDestroy {
       data.features.forEach((feature, index) => feature.properties.color = colors[index]);
       this.features = data
 
+      const bikeLayer = new google.maps.BicyclingLayer();
+      bikeLayer.setMap(this.map);
+      this.initLocation()
       this.map.data.addGeoJson(this.features);
       this.map.data.setStyle(this.styleFunc);
       this.map.data.addListener('click', event => this.clicked(event))
     });
+  }
+
+  initLocation() {
+    const myloc = new google.maps.Marker({
+      clickable: false,
+      icon: new google.maps.MarkerImage('assets/images/current_location.png',
+        new google.maps.Size(48,48),
+        new google.maps.Point(0,0),
+        new google.maps.Point(24,24),
+        new google.maps.Size(48,48)),
+      shadow: null,
+      zIndex: 999,
+      map: this.map
+    });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(function(pos) {
+        const me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+        myloc.setPosition(me);
+      }, function(error) {
+        console.error(error);
+      });
+    }
   }
 
   ngOnDestroy() {

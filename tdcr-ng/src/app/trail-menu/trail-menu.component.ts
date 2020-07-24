@@ -13,7 +13,6 @@ export class TrailMenuComponent implements OnInit, OnDestroy {
   features;
   trailChangingSubscription;
 
-
   constructor(private layoutDataService: LayoutDataService) {
     this.trailChangingSubscription = this.layoutDataService.selectedTrailMapChanging().subscribe(feature => this.trackSelectedFromMap(feature));
   }
@@ -30,7 +29,6 @@ export class TrailMenuComponent implements OnInit, OnDestroy {
   }
 
   trackSelectedClick(feature) {
-    console.log('menu selected')
     this.selectedItemName = feature.properties.name + ' ▽';
     this.layoutDataService.selectedTrailMenuChanged(feature);
   }
