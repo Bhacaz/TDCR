@@ -15,7 +15,7 @@ export class TrailMenuComponent implements OnInit, OnDestroy {
 
 
   constructor(private layoutDataService: LayoutDataService) {
-    this.trailChangingSubscription = this.layoutDataService.selectedTrailChanging().subscribe(feature => this.trackSelected(feature));
+    this.trailChangingSubscription = this.layoutDataService.selectedTrailMapChanging().subscribe(feature => this.trackSelectedFromMap(feature));
   }
 
   ngOnInit() {
@@ -25,12 +25,17 @@ export class TrailMenuComponent implements OnInit, OnDestroy {
     });
   }
 
-  trackSelected(feature) {
+  trackSelectedFromMap(feature) {
     this.selectedItemName = feature.properties.name + ' ▽';
   }
 
+  trackSelectedClick(feature) {
+    console.log('menu selected')
+    this.selectedItemName = feature.properties.name + ' ▽';
+    this.layoutDataService.selectedTrailMenuChanged(feature);
+  }
+
   ngOnDestroy() {
-    // unsubscribe to ensure no memory leaks
     this.trailChangingSubscription.unsubscribe();
   }
 }

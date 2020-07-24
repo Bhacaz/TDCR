@@ -15,11 +15,19 @@ export class LayoutDataService {
 
   private subject$ = new Subject<any>();
 
-  selectedTrailChanged(trail: object) {
+  selectedTrailMapChanged(trail: object) {
     this.subject$.next(trail);
   }
 
-  selectedTrailChanging(): Observable<any> {
+  selectedTrailMapChanging(): Observable<any> {
+    return this.subject$.asObservable();
+  }
+
+  selectedTrailMenuChanged(trail: object) {
+    this.subject$.next(trail);
+  }
+
+  selectedTrailMenuChanging(): Observable<any> {
     return this.subject$.asObservable();
   }
 }

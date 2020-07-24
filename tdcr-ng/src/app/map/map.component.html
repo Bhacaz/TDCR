@@ -6,6 +6,7 @@
   [streetViewControl]="options.streetViewControl"
   [mapTypeControl]="options.mapTypeControl"
   [mapTypeControlOptions]="options.mapTypeControlOptions"
+  [fitBounds]="fitBoundsItem"
+  (mapReady)="mapReady($event)"
 >
-  <agm-data-layer [geoJson]="features" (layerClick)="clicked($event)" [style]="styleFunc"></agm-data-layer>
 </agm-map>
